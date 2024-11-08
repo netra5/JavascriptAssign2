@@ -1,0 +1,124 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+h1 {
+    margin: 20px;
+    font-size: 2.8em;
+    font-weight: 700;
+    background: linear-gradient(45deg, #4A90E2, #7B61FF);
+    color: #2d5a88; /* Fallback color */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#gallery {
+    max-width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Featured Image Styling */
+figure {
+    position: relative;
+    border: 4px solid #ccc;
+    padding: 10px;
+    background: #fdfdfd;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    border-radius: 12px;
+}
+
+figure:hover {
+    transform: scale(1.03);
+}
+
+#featured-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+figcaption {
+    font-size: 1.3em;
+    color: #444;
+    margin-top: 12px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Thumbnail List Styling */
+#thumbnail-list {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#thumbnail-list li {
+    list-style: none;
+}
+
+#thumbnail-list img {
+    cursor: pointer;
+    width: 100px;
+    height: 66px;
+    filter: grayscale(80%);
+    border: 2px solid transparent;
+    transition: filter 0.4s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+}
+
+#thumbnail-list img:hover {
+    transform: scale(1.15);
+    filter: grayscale(0%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+#thumbnail-list img.active {
+    filter: grayscale(0%);
+    border-color: #4A90E2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.6);
+}
+
+/* Lightbox Styles */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-img {
+    max-width: 80%;
+    max-height: 80%;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.lightbox-img:hover {
+    transform: scale(1.05);
+}
